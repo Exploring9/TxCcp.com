@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  get 'static_pages/about_us'
+
+  get 'static_pages/terms_and_conditions'
+
+  get 'static_pages/plan'
+  
+  get 'static_pages/feedback'
+  
+  get 'static_pages/original_app'
+  
   get 'home/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
