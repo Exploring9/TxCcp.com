@@ -2,8 +2,6 @@ Rails.application.routes.draw do
   get 'static_pages/about_us'
 
   get 'static_pages/terms_and_conditions'
-
-  get 'static_pages/plan'
   
   get 'static_pages/feedback'
   

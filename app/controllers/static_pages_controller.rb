@@ -4,9 +4,6 @@ class StaticPagesController < ApplicationController
 
   def terms_and_conditions
   end
-
-  def plan
-  end
   
   def feedback
   end

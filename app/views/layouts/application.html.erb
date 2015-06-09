@@ -1,22 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>App</title>
+  <title>Tax Calculator - Phoenix</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-<h3 id="main_title">Tax Calculator Phoenix</h3>
-<div class="header">
-	<div>Tax Calculator</div>
-	<div>Plan</div>
-	<div>Feedback</div>
-	<div>Terms of Condition</div>
-	<div>About Us</div>
-</div>
-
-<%= yield %>
-
+	<%= render "layouts/header" %>
+	
+	<%= yield %>
+	
+	<%= render "layouts/footer" %>
 </body>
 </html>

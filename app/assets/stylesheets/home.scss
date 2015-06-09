@@ -2,14 +2,18 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+* {
+  font-family: Courier New;
+}
+
 h3#main_title {
   text-align: left;
 }
 
-div.header {
+header{
   text-align:left ;
   
-  > div {
+  li {
     border: 1px solid gray;
     margin: 5px;
     width: 200px;

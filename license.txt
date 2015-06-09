@@ -1,0 +1,60 @@
+All of the code and plans are released 
+under an MIT license and a legal disclaimer. 
+But, if you use any of my code or plans 
+it would be nice if you let me know and 
+so that we can collaborate together ;).
+You can reach me at raikutis at gmail.com 
+
+
+The MIT License (MIT)
+
+Copyright (c) 2015 Matas Milukas 
+
+Permission is hereby granted, free of charge,
+to any person obtaining a copy of this software 
+and associated documentation files (the "Software"),
+to deal in the Software without restriction,
+including without limitation the rights to use, 
+copy,modify, merge, publish, distribute, sublicense,
+and/or sell copies of the Software, and to permit 
+persons to whom the Software is furnished to do so,
+subject to the following conditions:
+
+
+The above copyright notice and this permission notice 
+shall be included in all copies or substantial portions 
+of the Software. 
+
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, 
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES 
+OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. 
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, 
+DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, 
+TORT OR OTHERWISE,ARISING FROM, OUT OF OR IN CONNECTION 
+WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
+Legal Disclaimer
+
+The information contained on this website/software does not constitute 
+legal advice or tax advice. Its authors make no claims about its 
+accuracy, completeness, or up-to-date character and that applies to 
+any site linked to this website as well. No author or owner
+of this website/software is acting as your attorney.
+Legal rules and tax rules change frequently, therefore,
+we cannot guarantee that any information on 
+this website/software is accurate or up to date.
+
+Nothing on this website/software should be viewed as tax advice 
+nor is any information on this site intended to be used for 
+the purpose of state or federal tax penalty protection.  
+Furthermore, the information on this site may not be used 
+in connection with the marketing of any state or federal tax 
+plan without the prior consent of the author. 
+
+The law varies widely from jurisdiction to jurisdiction, 
+and it is subject to varying interpretation.  
+Legal advice, including tax advice, must always be tailored to 
+your circumstances, and nothing on this website/software 
+should be viewed as a substitute for the advice of a competent attorney. 
