@@ -11,9 +11,4 @@ class StaticPagesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should get plan" do
-    get :plan
-    assert_response :success
-  end
-
 end
