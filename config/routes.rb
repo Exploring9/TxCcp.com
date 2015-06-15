@@ -8,7 +8,9 @@ Rails.application.routes.draw do
   get 'static_pages/original_app'
   
   get 'home/index'
-
+  
+  resources :feedback, except: [:destroy, :update, :edit]
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
