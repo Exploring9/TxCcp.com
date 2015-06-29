@@ -1,22 +1,23 @@
 Rails.application.routes.draw do
-  get 'static_pages/about_us'
-
-  get 'static_pages/terms_and_conditions'
   
-  get 'static_pages/feedback'
-  
-  get 'static_pages/original_app'
-  
-  get 'home/index'
-  
-  resources :feedback, except: [:destroy, :update, :edit]
-  
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
-
   # You can have the root of your site routed with "root"
   root 'home#index'
-
+  # Introduction Page - The Tax Calculator is on this page
+  get 'home/index'
+  
+  # Static pages about the application
+  get 'static_pages/about_us'
+  get 'static_pages/terms_and_conditions'
+  get 'static_pages/original_app'
+  
+  # Page to contact me
+  get 'messages', to: 'messages#new'
+  post 'messages', to: 'messages#create'
+  
+  #
+  # The priority is based upon order of creation: first created -> highest priority.
+  # See how all your routes lay out with "rake routes".
+  
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

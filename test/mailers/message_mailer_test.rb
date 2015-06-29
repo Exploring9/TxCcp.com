@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class FeedbackControllerTest < ActionController::TestCase
+class MessageMailerTest < ActionMailer::TestCase
   # test "the truth" do
   #   assert true
   # end

@@ -16,7 +16,14 @@ module Database_Sequel
     puts DB
     
   end
-
+  
+  def self.check_migrations()
+    Sequel.extension :migration
+    #I commented it out so it doesn't automatically run a migration
+    #Sequel::Migrator.run(DB, './db/sequel_migrate')
+    Sequel::Migrator.check_current(DB, './db/sequel_migrate')
+  end
 end
 
 Database_Sequel::establish_connection()
+Database_Sequel::check_migrations()
