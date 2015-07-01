@@ -4,6 +4,7 @@
 #.rspec
 /log
 log
+log/production.log 
 /tmp
 tmp
 #/config/database.yml
