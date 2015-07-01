@@ -10,17 +10,17 @@ class Message < Sequel::Model
     @content =  params[:content]
   end  
   
-  def save()
+  def saved()
     puts "Message save"
-    Message.insert(:name=> self.name,:email=>self.email,:content=>self.content)
+    Message.insert({:name=> self.name,:email=>self.email,:content=>self.content,
+       :create => Time.now, :update => Time.now})
   end
   
-  def validate()
+  def validate
     puts "This is Sequel validate"
     super 
     validates_type String, [:name, :content, :email]
-    validates_presence [:name]
+    validates_presence [:name, :content, :email]
     validates_format /@/, :email
-    
   end 
 end

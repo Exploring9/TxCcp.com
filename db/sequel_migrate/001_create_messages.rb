@@ -5,6 +5,8 @@ Sequel.migration do
       String :name,      :null=>false
       String :email,     :null=>false
       String :content,   :null=>false
+      Time   :create,    :null=>false
+      Time   :update,    :null=>false
     end
   end
   

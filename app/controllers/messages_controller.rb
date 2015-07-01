@@ -10,18 +10,19 @@ class MessagesController < ApplicationController
     #This is called to check whether the parameters are correct (Per sequel)
     if Message.new(params).valid?
       @message = Message.new(params)
-      @message.save
+      @message.saved
       send_message()
+      redirect_to messages_path, notice: "Your messages has been sent."
     else 
+      puts "Not valid"
+      render :new
       flash[:alert] = "An error occurred while delivering this message.
       Check whether you have correctly written your name/email/content. (They can't be blank)"
-      render :new
     end
   end
   
   def send_message()
       MessageMailer.new_message(@message).deliver_now
-      redirect_to messages_path, notice: "Your messages has been sent."
   end
 
 private

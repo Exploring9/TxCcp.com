@@ -1,0 +1,4 @@
+good_message:
+  !ruby/symbol name: test_name
+  !ruby/symbol content: test_content
+  !ruby/symbol email: test@test.com

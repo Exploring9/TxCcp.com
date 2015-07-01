@@ -18,9 +18,11 @@ module Database_Sequel
   end
   
   def self.check_migrations()
+    puts "Checking for Migrations - Comment it out if you don't want 
+    to run the migrations"
     Sequel.extension :migration
     #I commented it out so it doesn't automatically run a migration
-    #Sequel::Migrator.run(DB, './db/sequel_migrate')
+    Sequel::Migrator.run(DB, './db/sequel_migrate')
     Sequel::Migrator.check_current(DB, './db/sequel_migrate')
   end
 end
