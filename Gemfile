@@ -47,3 +47,5 @@ group :development, :test do
   #gem 'fixture_dependencies'
 end
 
+#This is to monitor my app
+gem 'newrelic_rpm'

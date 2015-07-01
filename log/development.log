@@ -36213,3 +36213,51 @@ Processing by MessagesController#new as HTML
   Rendered layouts/_header.html.erb (1.1ms)
   Rendered layouts/_footer.html.erb (0.3ms)
 Completed 200 OK in 66ms (Views: 65.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-01 19:56:12 +0200
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (15.8ms)
+  Rendered layouts/_header.html.erb (3.6ms)
+  Rendered layouts/_footer.html.erb (2.0ms)
+Completed 200 OK in 536ms (Views: 512.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-01 19:56:16 +0200
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_header.html.erb (4.5ms)
+  Rendered layouts/_footer.html.erb (2.5ms)
+Completed 200 OK in 102ms (Views: 100.3ms)
+
+
+Started GET "/messages" for 127.0.0.1 at 2015-07-01 19:56:18 +0200
+Processing by MessagesController#new as HTML
+  Rendered messages/new.html.erb within layouts/application (10.9ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 157ms (Views: 154.6ms)
+
+
+Started GET "/static_pages/terms_and_conditions" for 127.0.0.1 at 2015-07-01 19:56:19 +0200
+Processing by StaticPagesController#terms_and_conditions as HTML
+  Rendered static_pages/terms_and_conditions.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 120ms (Views: 118.5ms)
+
+
+Started GET "/messages" for 127.0.0.1 at 2015-07-01 19:56:20 +0200
+Processing by MessagesController#new as HTML
+  Rendered messages/new.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 84ms (Views: 82.6ms)
+
+
+Started GET "/static_pages/about_us" for 127.0.0.1 at 2015-07-01 19:56:21 +0200
+Processing by StaticPagesController#about_us as HTML
+  Rendered static_pages/about_us.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 122ms (Views: 121.5ms)

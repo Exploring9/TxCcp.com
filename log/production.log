@@ -184,3 +184,361 @@ ActionController::RoutingError (No route matches [GET] "/javascripts/application
   /usr/local/rvm/gems/ruby-2.2.1@global/bin/ruby_executable_hooks:15:in `<main>'
 
 
+I, [2015-07-01T20:39:38.861111 #8190]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-07-01 20:39:38 +0200
+I, [2015-07-01T20:39:38.886457 #8190]  INFO -- : Processing by HomeController#index as HTML
+I, [2015-07-01T20:39:38.922342 #8190]  INFO -- :   Rendered home/index.html.erb within layouts/application (1.2ms)
+I, [2015-07-01T20:39:38.931265 #8190]  INFO -- :   Rendered layouts/_header.html.erb (4.3ms)
+I, [2015-07-01T20:39:38.936097 #8190]  INFO -- :   Rendered layouts/_footer.html.erb (1.7ms)
+I, [2015-07-01T20:39:38.936820 #8190]  INFO -- : Completed 200 OK in 50ms (Views: 24.3ms)
+I, [2015-07-01T20:39:39.208067 #8190]  INFO -- : Started GET "/stylesheets/application.css" for 127.0.0.1 at 2015-07-01 20:39:39 +0200
+F, [2015-07-01T20:39:39.212872 #8190] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/no/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/no/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/no/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+I, [2015-07-01T20:39:39.270525 #8190]  INFO -- : Started GET "/javascripts/application.js" for 127.0.0.1 at 2015-07-01 20:39:39 +0200
+F, [2015-07-01T20:39:39.273936 #8190] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/no/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/no/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/no/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+I, [2015-07-01T20:39:42.805976 #8190]  INFO -- : Started GET "/messages" for 127.0.0.1 at 2015-07-01 20:39:42 +0200
+I, [2015-07-01T20:39:42.808658 #8190]  INFO -- : Processing by MessagesController#new as HTML
+I, [2015-07-01T20:39:42.815286 #8190]  INFO -- :   Rendered messages/new.html.erb within layouts/application (3.7ms)
+I, [2015-07-01T20:39:42.819285 #8190]  INFO -- :   Rendered layouts/_header.html.erb (1.8ms)
+I, [2015-07-01T20:39:42.820549 #8190]  INFO -- :   Rendered layouts/_footer.html.erb (0.8ms)
+I, [2015-07-01T20:39:42.823013 #8190]  INFO -- : Completed 200 OK in 12ms (Views: 11.5ms)
+I, [2015-07-01T20:39:42.898168 #8190]  INFO -- : Started GET "/stylesheets/application.css" for 127.0.0.1 at 2015-07-01 20:39:42 +0200
+F, [2015-07-01T20:39:42.903915 #8190] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/no/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/no/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/no/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+I, [2015-07-01T20:39:42.907804 #8190]  INFO -- : Started GET "/javascripts/application.js" for 127.0.0.1 at 2015-07-01 20:39:42 +0200
+F, [2015-07-01T20:39:42.910543 #8190] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/no/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/no/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/no/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+I, [2015-07-01T20:39:49.965830 #8190]  INFO -- : Started POST "/messages?method=post" for 127.0.0.1 at 2015-07-01 20:39:49 +0200
+I, [2015-07-01T20:39:49.968067 #8190]  INFO -- : Processing by MessagesController#create as HTML
+I, [2015-07-01T20:39:49.971749 #8190]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"hmQCel9aW176EbkTmU7Ks9mcdl5KghlJ5eJKQjmVsv+dX0TxiROyqrvDKsp7P0arucM32nUJWyNVe1ov7KTX7g==", "name"=>"Name", "email"=>"Email@", "content"=>"Message", "commit"=>"Send", "method"=>"post"}
+I, [2015-07-01T20:39:50.132118 #8190]  INFO -- :   Rendered message_mailer/new_message.text.erb (1.5ms)
+D, [2015-07-01T20:39:50.456897 #8190] DEBUG -- : 
+MessageMailer#new_message: processed outbound mail in 397.9ms
+I, [2015-07-01T20:39:52.593426 #8190]  INFO -- : 
+Sent mail to raikutis@gmail.com (2136.2ms)
+D, [2015-07-01T20:39:52.593552 #8190] DEBUG -- : Date: Wed, 01 Jul 2015 20:39:50 +0200
+From: Your Mailer <raikutis@gmail.com>
+To: Your Name <raikutis@gmail.com>
+Message-ID: <559433f671238_1ffe22aa09c4085d@no-Inspiron-1750.mail>
+Subject: Message from Name - TAXCP.COM
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Name: Name 
+
+Email Address: <Email@> 
+
+Wrote:
+
+Message
+I, [2015-07-01T20:39:52.594523 #8190]  INFO -- : Redirected to http://localhost:3000/messages
+I, [2015-07-01T20:39:52.594827 #8190]  INFO -- : Completed 302 Found in 2623ms
+I, [2015-07-01T20:39:52.786029 #8190]  INFO -- : Started GET "/messages" for 127.0.0.1 at 2015-07-01 20:39:52 +0200
+I, [2015-07-01T20:39:52.787664 #8190]  INFO -- : Processing by MessagesController#new as HTML
+I, [2015-07-01T20:39:52.791246 #8190]  INFO -- :   Rendered messages/new.html.erb within layouts/application (1.3ms)
+I, [2015-07-01T20:39:52.793596 #8190]  INFO -- :   Rendered layouts/_header.html.erb (1.4ms)
+I, [2015-07-01T20:39:52.794390 #8190]  INFO -- :   Rendered layouts/_footer.html.erb (0.4ms)
+I, [2015-07-01T20:39:52.795801 #8190]  INFO -- : Completed 200 OK in 7ms (Views: 6.2ms)
+I, [2015-07-01T20:39:52.874754 #8190]  INFO -- : Started GET "/stylesheets/application.css" for 127.0.0.1 at 2015-07-01 20:39:52 +0200
+F, [2015-07-01T20:39:52.876745 #8190] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/no/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/no/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/no/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+I, [2015-07-01T20:39:52.884156 #8190]  INFO -- : Started GET "/javascripts/application.js" for 127.0.0.1 at 2015-07-01 20:39:52 +0200
+F, [2015-07-01T20:39:52.890313 #8190] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/no/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/no/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/no/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+I, [2015-07-01T20:40:06.675559 #8190]  INFO -- : Started POST "/messages?method=post" for 127.0.0.1 at 2015-07-01 20:40:06 +0200
+I, [2015-07-01T20:40:06.677111 #8190]  INFO -- : Processing by MessagesController#create as HTML
+I, [2015-07-01T20:40:06.677305 #8190]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"cxm8OjiCj4QIB9AxWFtOMTWQvaFW1/l1YqUsXCXO8bFoIvqx7stmcEnVQ+i6KsIpVc/8JWlcux/SPDwx8P+UoA==", "name"=>"Name", "email"=>"redtax@", "content"=>"Message", "commit"=>"Send", "method"=>"post"}
+I, [2015-07-01T20:40:06.701317 #8190]  INFO -- :   Rendered message_mailer/new_message.text.erb (2.3ms)
+D, [2015-07-01T20:40:06.702503 #8190] DEBUG -- : 
+MessageMailer#new_message: processed outbound mail in 4.8ms
+I, [2015-07-01T20:40:08.679849 #8190]  INFO -- : 
+Sent mail to raikutis@gmail.com (1977.1ms)
+D, [2015-07-01T20:40:08.679992 #8190] DEBUG -- : Date: Wed, 01 Jul 2015 20:40:06 +0200
+From: Your Mailer <raikutis@gmail.com>
+To: Your Name <raikutis@gmail.com>
+Message-ID: <55943406ac242_1ffe22aa09c409cf@no-Inspiron-1750.mail>
+Subject: Message from Name - TAXCP.COM
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Name: Name 
+
+Email Address: <redtax@> 
+
+Wrote:
+
+Message
+I, [2015-07-01T20:40:08.680657 #8190]  INFO -- : Redirected to http://localhost:3000/messages
+I, [2015-07-01T20:40:08.680933 #8190]  INFO -- : Completed 302 Found in 2003ms
+I, [2015-07-01T20:40:08.968907 #8190]  INFO -- : Started GET "/messages" for 127.0.0.1 at 2015-07-01 20:40:08 +0200
+I, [2015-07-01T20:40:08.970341 #8190]  INFO -- : Processing by MessagesController#new as HTML
+I, [2015-07-01T20:40:08.975645 #8190]  INFO -- :   Rendered messages/new.html.erb within layouts/application (3.8ms)
+I, [2015-07-01T20:40:08.978411 #8190]  INFO -- :   Rendered layouts/_header.html.erb (1.6ms)
+I, [2015-07-01T20:40:08.979474 #8190]  INFO -- :   Rendered layouts/_footer.html.erb (0.6ms)
+I, [2015-07-01T20:40:08.979933 #8190]  INFO -- : Completed 200 OK in 9ms (Views: 8.5ms)
+I, [2015-07-01T20:40:09.613893 #8190]  INFO -- : Started GET "/stylesheets/application.css" for 127.0.0.1 at 2015-07-01 20:40:09 +0200
+F, [2015-07-01T20:40:09.615846 #8190] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/no/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/no/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/no/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+I, [2015-07-01T20:40:09.625703 #8190]  INFO -- : Started GET "/javascripts/application.js" for 127.0.0.1 at 2015-07-01 20:40:09 +0200
+F, [2015-07-01T20:40:09.627674 #8190] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/no/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/no/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/no/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
