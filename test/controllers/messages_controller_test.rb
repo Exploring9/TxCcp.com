@@ -34,7 +34,7 @@ class MessagesControllerTest < ActionController::TestCase
   end
   
   def test_flash_good_message
-    #Params is wrong
+    #Params is good
     post :create, {:name => "a",:email => "@", :content => "s"}
     #assert_redirected_to(controller: "message", action: "new") 
     assert_equal  "Your messages has been sent.", flash[:notice] 

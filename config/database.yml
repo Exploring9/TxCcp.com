@@ -22,7 +22,7 @@ default: &default
   pool: 5
   host: localhost
   username: rails
-  password: <%= ENV['APP_DATABASE_PASSWORD'] %>
+  password: '9iZSdCqES8'
 
 development:
   <<: *default
@@ -85,5 +85,5 @@ production:
   <<: *default
   database: app_production
   username: rails
-  password: <%= ENV['APP_DATABASE_PASSWORD'] %>
+
   

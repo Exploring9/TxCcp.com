@@ -1,0 +1,15 @@
+
+<h3 class="title">
+  <%= @post[:title] %>
+</h3>
+ 
+
+<p class="date">
+  Submitted on
+  <%= @post[:create].to_formatted_s(:long_ordinal) %>
+</p>
+ 
+
+<p class="body">
+  <%= @post[:body]%>
+</p>
