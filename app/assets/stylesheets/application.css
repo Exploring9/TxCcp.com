@@ -13,3 +13,18 @@
  *= require_tree .
  *= require_self
  */
+* {
+  font-family: Courier New;
+}
+
+h3#main_title {
+  text-align: left;
+}
+
+header{
+  text-align:left ;
+}
+
+fieldset{
+	width: 250px;
+}

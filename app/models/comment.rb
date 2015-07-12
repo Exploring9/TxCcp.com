@@ -21,9 +21,8 @@ class Comment < Sequel::Model
   
   def validate
         super 
-   # validates_type String, [:name, :body]
-   # validates_type Interger, [:post_id]
-   # validates_presence [:name, :body, :post_id]
+    validates_type String, [:name, :body, :post_id]
+    validates_presence [:name, :body, :post_id]
   end
   
 end
