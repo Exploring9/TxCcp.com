@@ -1,15 +1,24 @@
-
-<h3 class="title">
-  <%= @post[:title] %>
-</h3>
- 
-
-<p class="date">
-  Submitted on
-  <%= @post[:create].to_formatted_s(:long_ordinal) %>
-</p>
- 
-
-<p class="body">
-  <%= @post[:body]%>
-</p>
+<div id="post_content">
+	<h3 class="title">
+	  <%= @post[:title] %>
+	</h3>
+	 
+	
+	<p class="date">
+	  Submitted on
+	  <%= @post[:create].to_formatted_s(:long_ordinal) %>
+	</p>
+	 
+	
+	<p class="body">
+	  <%= @post[:body]%>
+	</p>
+<%= request.fullpath.last %>
+	<div id="comments">
+	  <h2><%= #@post.comments.count 
+	  %></h2>
+	  <%=  render "comments/form"  %>
+	
+	  <%=  render "comments/comment" %>
+	</div>
+</div>

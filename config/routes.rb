@@ -15,8 +15,9 @@ Rails.application.routes.draw do
   post 'messages', to: 'messages#create'
   
   #This is for the posts
-  resources :posts, only: [:index, :new, :show, :create]
+  resources :posts, only: [:index, :new, :show, :create], param: :post_id
   
+  resources :comments, only: [:index, :new, :show, :create], param: :comment_id
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
   

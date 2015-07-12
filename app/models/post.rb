@@ -1,7 +1,11 @@
 Sequel::Model.plugin(:validation_helpers)
 class Post < Sequel::Model
+  one_to_many :comments
   plugin :validation_helpers
+  plugin :association_dependencies, :comments => :delete
+  
   attr_accessor :title, :body
+
   
   def initialize(params)
     puts "I am in class Post < Sequel::Model"  

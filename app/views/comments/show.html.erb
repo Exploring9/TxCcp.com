@@ -1,0 +1,26 @@
+<div id="post_content">
+	<h3 class="title">
+	  <%= @comment[:name] %>
+	</h3>
+	 
+	
+	<p class="date">
+	  Submitted on
+	  <%= @comment[:create].to_formatted_s(:long_ordinal) %>
+	</p>
+	 
+	
+	<p class="body">
+	  <%= @comment[:body]%>
+	</p>
+
+	<div id="comments">
+	  <h2><%= #@post.comments.count 
+	  %> Comments</h2>
+	  <%= #render @post.comments 
+	  %>
+	
+	  <%= # render "comments/form"
+	   %>
+	</div>
+</div>

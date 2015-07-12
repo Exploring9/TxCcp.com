@@ -14,7 +14,7 @@ class PostsControllerTest < ActionController::TestCase
     assert_select 'input'
     assert_select 'fieldset'
   end
-  
+
   def test_should_get_the_post_index_page
     get :index
     assert_response :success
@@ -23,10 +23,10 @@ class PostsControllerTest < ActionController::TestCase
     assert_template layout: "layouts/application", partial: "_footer"
     assert_template layout: "layouts/application", partial: "_header" 
   end
-  
-  def test_should_get_the_show_page
-    post :create, {:title => "a", :body => "s", :id => 1}
-    get :show, id: 1
+
+  def test_get_the_show_page
+    post :create, post: {:title => "a", :body => "s", :post_id => 1}
+    get :show, :post_id => 1
     assert_response :success
     assert_template "posts/show"
     assert_template layout: "layouts/application"
@@ -35,10 +35,10 @@ class PostsControllerTest < ActionController::TestCase
     assert_select 'h3', 'a'
     assert_select 'p', 's'
   end
-  
+
   def test_flash_bad_post
     #Params is wrong
-    post :create, {:title => nil, :body => "", :id => 2 }
+    post :create, {:title => nil, :body => "", :post_id => 2 }
     #assert_redirected_to(controller: "message", action: "new") 
     assert_equal  "An error occured whilst creating the post check 
       whether you have entered values in the title and body cells.", flash[:alert] 

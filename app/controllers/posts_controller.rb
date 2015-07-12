@@ -9,7 +9,7 @@ class PostsController < ApplicationController
   
   def show
     puts params
-    @post = Post[params["id"]]
+    @post = Post[params["post_id"]]
   end
   
   def create
@@ -20,7 +20,7 @@ class PostsController < ApplicationController
     if Post.new(params).valid?
       @post = Post.new(params)
       @post.saved  
-      redirect_to post_path(Post.last.id)
+      redirect_to post_path(Post.last.post_id)
     else
       render 'new'
       flash[:alert] = "An error occured whilst creating the post check 
