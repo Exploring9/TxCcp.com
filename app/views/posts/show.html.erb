@@ -14,7 +14,7 @@
 	  <%= @post[:body]%>
 	</p>
 	<div id="comments">
-	  <div>Number of Comments: <%= count_comments(request.fullpath.last.to_i) %></div>
+	  <p>Number of Comments: <%= count_comments(request.fullpath) %></p>
 	  <%=  render "comments/form"  %>
 	
 	  <%=  render "comments/comment" %>

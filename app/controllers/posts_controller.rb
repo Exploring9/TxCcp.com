@@ -20,6 +20,9 @@ class PostsController < ApplicationController
     if Post.new(params).valid?
       @post = Post.new(params)
       @post.saved  
+      puts @post
+      puts Post.inspect
+      puts Post.last.inspect
       redirect_to post_path(Post.last.post_id)
     else
       render 'new'

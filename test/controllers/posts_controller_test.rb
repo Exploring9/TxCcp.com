@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class PostsControllerTest < ActionController::TestCase
-  
+
   def test_should_get_the_post_new_page
     get :new
     assert_response :success
@@ -25,7 +25,7 @@ class PostsControllerTest < ActionController::TestCase
   end
 
   def test_get_the_show_page
-    post :create, post: {:title => "a", :body => "s", :post_id => 1}
+    post :create, {:title => "a", :body => "s", :post_id => 1}
     get :show, :post_id => 1
     assert_response :success
     assert_template "posts/show"
@@ -43,5 +43,5 @@ class PostsControllerTest < ActionController::TestCase
     assert_equal  "An error occured whilst creating the post check 
       whether you have entered values in the title and body cells.", flash[:alert] 
   end
-  
+
 end

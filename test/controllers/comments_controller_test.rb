@@ -1,7 +1,16 @@
 require 'test_helper'
 
 class CommentsControllerTest < ActionController::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  def test_good_comment_passes
+    post :create, {:name => "a", :body => "a", :post_id => 2 } 
+    assert_response :redirect
+  end
+  
+  def test_bad_comment_fails
+    @request.headers["HTTP_REFERER"] = "http://localhost:3000/posts/1"
+    post :create, {:name => "a", :body => "a", :post_id => nil } 
+    assert_response :redirect
+    assert_equal  "Couldn't create a comment check whether you have written a name and some text", flash[:alert] 
+  end
+  
 end

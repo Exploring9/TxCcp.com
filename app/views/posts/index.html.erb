@@ -3,8 +3,8 @@
 <% if @posts.first.inspect.include?(":post_id=>1") %>
 <% @posts.each do |post| %>
   <div class="post_wrapper">
-  	<%= puts post.inspect %>
-  	<%= puts post[:post_id] %>
+  	<%= # puts post.inspect %> <%= puts post[:post_id]
+  	 %>
     <h3 class="title"><%= link_to(post[:title], controller: "posts", action: "show", post_id: post[:post_id]) %></h2>
     <p class="date"><%=  post[:create].to_formatted_s(:long_ordinal) %></p>
   </div>

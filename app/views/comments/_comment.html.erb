@@ -1,7 +1,7 @@
-<% load_comments(request.fullpath.last).each do |comment| %>
-  <div class="comment_content">
+<% load_comments(request.fullpath).each do |comment| %>
+  <p class="comment_content">
     <p class="comment_name"><strong><%= comment[:name] %></strong></p>
     <p class="comment_body"><%= comment[:body] %></p>
-    <p class="comment_time">Posted on:<%= comment[:create].to_formatted_s(:long_ordinal) %></p>	
-  </div>
+    <p class="comment_time">Posted on: <%= comment[:create].to_formatted_s(:long_ordinal) %></p>	
+  </p>
 <% end %>
