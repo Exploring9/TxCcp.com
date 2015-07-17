@@ -3,6 +3,7 @@
 #capybara-*.html
 #.rspec
 /log
+Gemfile.lock
 log
 log/production.log 
 /tmp
