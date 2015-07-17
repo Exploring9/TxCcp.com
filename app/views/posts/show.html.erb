@@ -8,15 +8,17 @@
 	  Submitted on
 	  <%= @post[:create].to_formatted_s(:long_ordinal) %>
 	</p>
-	 
 	
 	<p class="body">
-	  <%= @post[:body]%>
+	  Post Type:<%= @post[:post_type]%>
+	</p>	 
+	
+	<p class="body">
+	  <%= @post[:body].html_safe %>
 	</p>
 	<div id="comments">
-	  <p>Number of Comments: <%= count_comments(request.fullpath) %></p>
 	  <%=  render "comments/form"  %>
-	
+	  <p>Number of Comments: <%= count_comments(request.fullpath) %></p>
 	  <%=  render "comments/comment" %>
 	</div>
 </div>

@@ -25,7 +25,7 @@ class PostsControllerTest < ActionController::TestCase
   end
 
   def test_get_the_show_page
-    post :create, {:title => "a", :body => "s", :post_id => 1}
+    post :create, {:title => "a", :body => "s", :post_id => 1, :post_type => "General Taxation"}
     get :show, :post_id => 1
     assert_response :success
     assert_template "posts/show"
@@ -38,7 +38,7 @@ class PostsControllerTest < ActionController::TestCase
 
   def test_flash_bad_post
     #Params is wrong
-    post :create, {:title => nil, :body => "", :post_id => 2 }
+    post :create, {:title => nil, :body => "", :post_id => 2, :post_type => "General Taxation" }
     #assert_redirected_to(controller: "message", action: "new") 
     assert_equal  "An error occured whilst creating the post check 
       whether you have entered values in the title and body cells.", flash[:alert] 
