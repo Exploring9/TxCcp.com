@@ -45,7 +45,9 @@ Rails.application.configure do
   # config.force_ssl = true
 
   # Use the lowest log level to ensure availability of diagnostic information
+  
   # when problems arise.
+  RAILS_DEFAULT_LOGGER = Logger.new('log/production.log')
   config.log_level = :debug
 
   # Prepend all log lines with the following tags.
