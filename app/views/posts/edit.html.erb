@@ -1,0 +1,33 @@
+<!-- This is to make the flash message appear -->
+<% flash.each do |name, msg| %>
+      <%= content_tag :div, msg, class: name %>
+<% end %>
+
+<h3>Edit Post</h3>
+ 
+<!-- This is to make the form to make title and body appear -->
+<%= form_tag({controller: "posts", action: "save_edit"}, method: "post") do %>
+  <fieldset>
+    <div class="field">
+      <div>Title:</div>
+      <%= text_field_tag(:title, @post_information[:title]) %>
+    </div>
+    
+    <div class="field">
+      <div>Post Type:</div>	
+      <%= text_field_tag(:post_type, @post_information[:post_type])  %>
+    </div>    
+    
+    <div class="field" id="text_field_big">
+      <div>Body:</div>	
+      <%= text_area_tag(:body, @post_information[:body])  %>
+    </div>    
+  </fieldset>
+  <fieldset>
+  	
+    <div class="field">
+      <%= submit_tag("Send") %>
+    </div>
+    
+  </fieldset>
+<% end %>
