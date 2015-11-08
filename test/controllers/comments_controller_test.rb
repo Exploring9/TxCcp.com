@@ -2,7 +2,7 @@ require 'test_helper'
 
 class CommentsControllerTest < ActionController::TestCase
   def test_good_comment_passes
-    post :create, {:name => "a", :body => "a", :post_id => 2 } 
+    post :create, {:name => "a", :body => "a", :post_id => 1 } 
     assert_response :redirect
   end
   

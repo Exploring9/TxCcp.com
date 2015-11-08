@@ -1,6 +1,8 @@
 require "sequel"
+require_relative '../../db/seeds'
 # You need to use: Database_Sequel::DB to access the constant
 module Database_Sequel
+  include TxCcp_Seeds
   
   def self.establish_connection()
     puts "Sequel Database Connection:"
@@ -29,3 +31,4 @@ end
 
 Database_Sequel::establish_connection()
 Database_Sequel::check_migrations()
+
