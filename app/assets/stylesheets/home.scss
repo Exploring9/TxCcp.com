@@ -10,3 +10,25 @@ header{
     width: 200px;
   }
 }
+
+body{
+  .box{
+    box-sizing: border-box;
+    margin: 2px;
+    height:     200px;
+    max-height: 200px;
+    width:      400px;
+    max-widht:  400px;
+    border: 2.5px solid;
+    position: relative;
+    overflow-y: auto;
+  }
+  
+  .left{
+    float: left;
+  }
+  
+  .right{
+    float: right;
+  }
+}

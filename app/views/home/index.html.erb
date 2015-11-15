@@ -1,0 +1,49 @@
+<h4>Tax Calculator:</h4>
+<div id="Personal_Details_Data_Collect" class="box left">
+	Enter your personal details here:
+	<br>
+	Country of Residence:
+	<select form="data_Person_Residence_Country">
+		<!-- Get the details from an Ajax Call! -->
+	</select>
+	<br>
+	Filing Status:
+	<select form="data_Person_Filing_Status" data-upper-check="data_Person_Residence_Country">
+		<!-- Get the details from an Ajax Call! 
+			and Differentiate for each residency (i.e. state and type of income)-->
+	</select>
+	<br>
+	<input type="button" name="Button_Add_Personal_Details" value="Add Personal Details">
+</div>
+
+<div id="Personal_Details_Data_Show" class="box right">
+	Your personal details:
+	<br>
+	Country of Residence:
+	<br>
+	Filing Status:
+</div>
+
+<div id="Economic_Details_Data_Collect" class="box left">
+	Enter your income here:
+</div>
+
+<div id="Economic_Details_Data_Show" class="box right">
+	Your income:
+</div>
+
+<div id="Numeric_Tax_Calculation_Show" class="box left">
+	Tax Calculations:
+</div>
+
+<div id="Graph_Tax_Calculation_Show" class="box right">
+	Graph of Tax Calculations:	
+</div>
+
+<div id="Graph_Tax_Place_Show" class="box left">
+	Geographic place of taxes:
+</div>
+
+<div id="Alternatives_Tax" class="box right">
+	Alternative income taxation:
+</div>

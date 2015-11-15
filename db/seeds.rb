@@ -41,7 +41,7 @@ end
   
   def self.data_40001500_econ_transaction_group()
     dataset = Database_Sequel::DB[:econ_transaction_group]
-    dataset.import([:econ_transaction_group_id,:econ_transaction_group_name],[[1,"Labour_Taxes"],[2,"Interest"],[3,"Dividends"],[4,"Business income (Pass through)"],[5,"Capital"],[6,"Pensions and Annuities"],[7,"Rent"],[8,"Farming/Fishing income"],[9,"Religious"],[10,"Welfare"],[11,"Gambling"],[12,"Bartering"],[13,"Private welfare (Scholarships/Grants)"],[14,"Other"]])
+    dataset.import([:econ_transaction_group_id,:econ_transaction_group_name],[[1,"Labour"],[2,"Interest"],[3,"Dividends"],[4,"Business income (Pass through)"],[5,"Capital"],[6,"Pensions and Annuities"],[7,"Rent"],[8,"Farming/Fishing income"],[9,"Religious"],[10,"Welfare"],[11,"Gambling"],[12,"Bartering"],[13,"Private welfare (Scholarships/Grants)"],[14,"Other"]])
   end
   
   def self.data_40001510_econ_transaction()
@@ -66,7 +66,7 @@ end
   
   def self.data_40001800_currency()
     dataset = Database_Sequel::DB[:currency]
-    dataset.import([:currency_id,:currency_name,:ISO4217code,:tax_jurisdiction_id],[[1,"United States dollar","USD",52]])
+    dataset.import([:currency_id,:currency_name,:iso4217code,:tax_jurisdiction_id],[[1,"United States dollar","USD",52]])
   end
   
   def self.data_40001900_financial_year()
