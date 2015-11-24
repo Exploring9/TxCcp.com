@@ -2,18 +2,19 @@
 <div id="Personal_Details_Data_Collect" class="box left">
 	Enter your personal details here:
 	<br>
-	Country of Residence:
-	<select form="data_Person_Residence_Country">
+	1st - Country of Residence:
+	<select name="data_Person_Residence_Country" data-check = "false" data-selector="data_Person_Filing_Status">
 		<!-- Get the details from an Ajax Call! -->
 	</select>
 	<br>
-	Filing Status:
-	<select form="data_Person_Filing_Status" data-upper-check="data_Person_Residence_Country">
+	2nd - Filing Status:
+	<select name="data_Person_Filing_Status" data-check="data_Person_Residence_Country" data-selector = "data_Income_Location_Country" >
 		<!-- Get the details from an Ajax Call! 
 			and Differentiate for each residency (i.e. state and type of income)-->
 	</select>
 	<br>
 	<input type="button" name="Button_Add_Personal_Details" value="Add Personal Details">
+	<input type="button" name="Clear_Personal_Details" value="Clear Personal Details">
 </div>
 
 <div id="Personal_Details_Data_Show" class="box right">
@@ -25,7 +26,18 @@
 </div>
 
 <div id="Economic_Details_Data_Collect" class="box left">
-	Enter your income here:
+	Enter your income here: (Financial Year - 2015 [From 2015/01/01 till 2015/12/31])
+	<br>
+	3rd - Location of Earnings: (Country)<br>
+	<select form="data_Income_Location_Country" data-check="false" data-selector="data_Income_Source">
+		<!-- Get the data from Ajax -->
+	</select>
+	<br>
+	4th - Source of Income:<br>
+	<select form="data_Income_Source" data-check="data_Income_Location_Country">
+		<!-- Get the data from Ajax -->
+	</select><br>
+    5th - Size of Income:
 </div>
 
 <div id="Economic_Details_Data_Show" class="box right">

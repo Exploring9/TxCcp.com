@@ -18,6 +18,10 @@ Rails.application.routes.draw do
   resources :posts, only: [:index, :new, :show, :create, :edit], param: :post_id
   post 'posts/:post_id/edit', to: 'posts#save_edit'
   resources :comments, only: [:create], param: :comment_id
+  
+  match 'home/Send_Input_Data', to: 'home#Send_Input_Data', :via => [:get, :post]
+  
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
   

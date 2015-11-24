@@ -11,7 +11,7 @@ Sequel.migration do
    region.region_name,
    region.region_abbreviation,
    COALESCE(taxation.tax_id, tax_levy.tax_id) AS tax_id,
-   COALESCE(taxation.filing_status_id, filing_status.filing_status_id) AS filing_status,
+   COALESCE(taxation.filing_status_id, filing_status.filing_status_id) AS filing_status_id,
    filing_status.filing_status_name,
    COALESCE(taxation.tax_type_id, tax_type.tax_type_id) AS tax_type_id,
    tax_type.tax_type_name,
