@@ -14,15 +14,13 @@
 	</select>
 	<br>
 	<input type="button" name="Button_Add_Personal_Details" value="Add Personal Details">
-	<input type="button" name="Clear_Personal_Details" value="Clear Personal Details">
 </div>
 
 <div id="Personal_Details_Data_Show" class="box right">
-	Your personal details:
-	<br>
-	Country of Residence:
-	<br>
-	Filing Status:
+		Your personal details:
+	<div id="Personal_Details_Show">  
+	</div>
+	<input type="button" name="Clear_Personal_Details" value="Clear Personal Details">
 </div>
 
 <div id="Economic_Details_Data_Collect" class="box left">
@@ -37,7 +35,9 @@
 	<select form="data_Income_Source" data-check="data_Income_Location_Country">
 		<!-- Get the data from Ajax -->
 	</select><br>
-    5th - Size of Income:
+    5th - Size of Income:<input type="number" min="0" max="100" name="data_Income_Size" size="10">
+    <br>
+    <input type="button" name="Button_Add_Income_Details" value="Add Income">
 </div>
 
 <div id="Economic_Details_Data_Show" class="box right">

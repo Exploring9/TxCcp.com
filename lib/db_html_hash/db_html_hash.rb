@@ -5,7 +5,7 @@ module Db_html_hash
     "econ_transaction_name" => {"value" => :econ_transaction_id, "name" => :econ_transaction_name, "function" => "fetch_econ_transaction"}
   }
   
-  
+
   def self.html_to_database()
     return @html_to_database
   end
