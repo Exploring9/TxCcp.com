@@ -47,6 +47,19 @@ group :development, :test do
   gem 'spring'
   #This is so that the fixtures get loaded for rails
   #gem 'fixture_dependencies'
+  
+  #This is for UI testing
+  gem 'capybara'
+  # Capybara's front-end
+  gem 'selenium-webdriver'
+  # Rspec will be used with capybara (due to its functions)
+  gem 'rspec-rails'
+  #launcy goes together with capybara
+  gem 'launchy'
+  #To make save_and_open_page work
+  gem 'spork-rails'
+  #To make it work
+  gem 'chromedriver-helper'
 end
 
 #This is to monitor my app

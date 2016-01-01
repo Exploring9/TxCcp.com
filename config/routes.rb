@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   root 'home#index'
   # Introduction Page - The Tax Calculator is on this page
   get 'home/index'
+  #get '/', to: 'home#index'
   
   # Static pages about the application
   get 'static_pages/about_us'
@@ -19,9 +20,9 @@ Rails.application.routes.draw do
   post 'posts/:post_id/edit', to: 'posts#save_edit'
   resources :comments, only: [:create], param: :comment_id
   
-  match 'home/Send_Input_Data', to: 'home#Send_Input_Data', :via => [:get, :post]
+  match 'home/send_Input_Data', to: 'home#send_Input_Data', :via => [:get, :post]
   
-  
+  match 'home/send_All_Info', to: 'home#send_All_Info', :via => [:get, :post]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
   

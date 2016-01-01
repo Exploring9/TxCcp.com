@@ -8,7 +8,7 @@
 	</select>
 	<br>
 	2nd - Filing Status:
-	<select name="data_Person_Filing_Status" data-check="data_Person_Residence_Country" data-selector = "data_Income_Location_Country" >
+	<select name="data_Person_Filing_Status"  data-selector = "data_Income_Location_Country" >
 		<!-- Get the details from an Ajax Call! 
 			and Differentiate for each residency (i.e. state and type of income)-->
 	</select>
@@ -27,12 +27,12 @@
 	Enter your income here: (Financial Year - 2015 [From 2015/01/01 till 2015/12/31])
 	<br>
 	3rd - Location of Earnings: (Country)<br>
-	<select form="data_Income_Location_Country" data-check="false" data-selector="data_Income_Source">
+	<select name="data_Income_Location_Country" data-selector="data_Income_Source">
 		<!-- Get the data from Ajax -->
 	</select>
 	<br>
 	4th - Source of Income:<br>
-	<select form="data_Income_Source" data-check="data_Income_Location_Country">
+	<select name="data_Income_Source" >
 		<!-- Get the data from Ajax -->
 	</select><br>
     5th - Size of Income:<input type="number" min="0" max="100" name="data_Income_Size" size="10">
@@ -40,12 +40,13 @@
     <input type="button" name="Button_Add_Income_Details" value="Add Income">
 </div>
 
-<div id="Economic_Details_Data_Show" class="box right">
+<div id="Income_Details_Data_Show" class="box right">
 	Your income:
+	<div id="Income_Details_Show"></div>
 </div>
 
 <div id="Numeric_Tax_Calculation_Show" class="box left">
-	Tax Calculations:
+	Tax Calculations: <input type="button" name="Button_Calculate_Taxes" value="Calculate Taxes">
 </div>
 
 <div id="Graph_Tax_Calculation_Show" class="box right">

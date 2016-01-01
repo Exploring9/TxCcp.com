@@ -17,8 +17,8 @@ module View_all_taxesHelper
   end
   
   #All_econ_transactions per tax_jurisdiction_id
-  def all_econ_transactions(tax_jurisdiction_id)
-    all_econ_transactions = DB[:view_all_taxes].select(:econ_transaction_id, :econ_transaction_name).distinct(:econ_transaction_id).exclude(:econ_transaction_id=>nil).where(:tax_jurisdiction_id=>tax_jurisdiction_id).all
+  def all_econ_transactions_individual(tax_jurisdiction_id)
+    all_econ_transactions_individual = DB[:view_all_taxes].select(:econ_transaction_id, :econ_transaction_name).distinct(:econ_transaction_id).exclude(:econ_transaction_id=>nil).where(:tax_jurisdiction_id=>tax_jurisdiction_id).all
   end
   
 end
