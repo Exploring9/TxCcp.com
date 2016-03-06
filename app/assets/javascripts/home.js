@@ -184,7 +184,7 @@ $(document).ready(function() {
   			});
   		}
   };};
-  // PART 6 - ADD DETAILS TO THE WEBPAGE
+  // PART 6A - ADD DETAILS TO THE WEBPAGE (Tax Preparation)
   var add_to_the_webpage = {
   	add_details_to_the_webpage: function(Class_where_to_Display,object,id_of_object){
   		var add_to_the_webpage = '';
@@ -212,6 +212,17 @@ $(document).ready(function() {
   			add_to_the_webpage.add_clearing_properties(Class_where_to_Display,object,id_of_object);
   			add_to_the_webpage.add_details_to_the_webpage(Class_where_to_Display,object,id_of_object);
   		}
+  	}
+  };
+  
+  // PART 6B - ADD DETAILS TO THE WEBPAGE (Tax Results)
+  var add_results = {
+  	add_text_results: function(text_taxes){
+  		console.log("You are in add_results.add_text_results");
+  		console.log(text_taxes);
+  		console.log($("div[name=tax_caclulation_results_text]"));
+  		//$("div[name=tax_caclulation_results_text]").empty();
+  		$("div[name=tax_caclulation_results_text]").append(text_taxes);
   	}
   };
   // PART 7 - SEND THE DETAILS TO CALCULATE THE TAXES
@@ -250,6 +261,7 @@ $(document).ready(function() {
   			$('input[name="Button_Calculate_Taxes"]').click(function(){
 	  			if(check_Personal_Details_Object && check_Economic_Object){
 	  				console.log(add_All_Objects());
+	  				$("div[name=tax_caclulation_results_text]").empty();//This is to remove the previous calculated taxes
 	  				ajax_Caller.ajax_Send_Personal_Economical_Info(add_All_Objects());
 	  			}
   		});
@@ -284,7 +296,8 @@ $(document).ready(function() {
   			dataType: "text",
   			success: function(taxes) {
   				if(taxes){
-  					console.log(taxes);
+  					add_results.add_text_results(taxes);
+  					console.log("stopped here");
   				}
   			},
   			error:function(jqXHR, exception, errorThrown){

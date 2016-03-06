@@ -19,6 +19,8 @@ Sequel.migration do
    econ_transaction.econ_transaction_name,
    COALESCE(econ_transaction.econ_transaction_group_id,econ_transaction.econ_transaction_group_id) AS econ_transaction_group_id,
    econ_transaction_group.econ_transaction_group_name,
+   econ_transaction.tax_order_number,
+   econ_transaction.tax_order_type,
    financial_year.financial_year_name,
    tax_levy.tax_levy_id,
    COALESCE(tax_rate.tax_rate_id, tax_levy.tax_rate_id) AS tax_rate_id,

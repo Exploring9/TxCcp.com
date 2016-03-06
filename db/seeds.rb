@@ -46,14 +46,15 @@ end
   
   def self.data_40001510_econ_transaction()
     dataset = Database_Sequel::DB[:econ_transaction]
-    dataset.import([:econ_transaction_id,:econ_transaction_name,:econ_transaction_group_id],[[1,"Wages and Salaries",1],[2,"Interest Received",2],[3,"Dividends",3],[4,"Business Income",4],[5,"Capital Gains and Losses",5]])
+    dataset.import([:econ_transaction_id,:econ_transaction_name,:econ_transaction_group_id, :tax_order_number, :tax_order_type],[[1,"Wages and Salaries",1,1,"Earned Income"],[2,"Interest Received",2,3,"Unearned Income"],[3,"Dividends",3,4,"Unearned Income"],[4,"Business Income",4,2,"Earned Income"],[5,"Capital Gains and Losses",5,5,"Unearned Income"]])
   end
+        #Need to double check on earned and unearned income (Also I need to create groups for tax jurisdictions!!!!)
   
   def self.data_40001520_tax_jurisdiction_and_econ_transaction()
     dataset = Database_Sequel::DB[:tax_jurisdiction_and_econ_transaction]
     dataset.import([:econ_transaction_id,:tax_jurisdiction_id,:description_id],[[1,52,6],[2,52,7],[3,52,8],[4,52,9],[5,52,10]])
   end
-  
+        
   def self.data_40001600_tax_type()
     dataset = Database_Sequel::DB[:tax_type]
     dataset.import([:tax_type_id,:tax_type_name,:econ_transaction_id],[[1,"Labour Taxation",1],[2,"Interest Taxation",2],[3,"Dividends Taxation",3],[4,"Business Income Taxation",4],[5,"Capital Gains Taxation",5]])

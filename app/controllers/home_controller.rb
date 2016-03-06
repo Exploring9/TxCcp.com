@@ -1,3 +1,4 @@
+require '.../../../lib/prepare_tax_info/prepare_tax_info' #Prepare the information to be shared on the website (it will be become responsive and two ways communications)
 class HomeController < ApplicationController
   include Database_Sequel 
   def index
@@ -13,7 +14,10 @@ class HomeController < ApplicationController
   def send_All_Info
     puts params
     puts HomeHelperTaxCalculation::calculate_taxes(params)
-    render :plain => "test_data_filler", :status => 200
+    puts "This is after the HomeHelperTaxCaclulation has been called"
+    @info_for_the_website = Prepare_tax_info.new()
+    puts "This is the @info_for_the_website: #{@info_for_the_website.full_html}"
+    render :plain => @info_for_the_website.full_html, :status => 200
   end
   
 end
