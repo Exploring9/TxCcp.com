@@ -4,7 +4,7 @@ module Convert_to_html
   def self.convert_to_html_select_options(html_to_database,db_results, type_of_data)
     puts "This is convert_to_html: #{db_results}";
     puts "This is type_of_data: #{type_of_data}";
-    puts html_to_database
+    #puts html_to_database
     generated_html = type_of_data;#This is to know to which HTML to add the info [I make into a string so that Javascript can easily make into an array]
 
     @db_access_value = html_to_database[type_of_data]["value"];
@@ -38,8 +38,10 @@ module Convert_to_html
     puts "This is the html_header_creation: (econmic_object_aggregate): #{@personal_economic_data_object[:economic_object_aggregate]}"
     total_income = @personal_economic_data_object[:economic_object_aggregate].data_Income_Size_aggregate
     total_taxes = @personal_economic_data_object[:economic_object_aggregate].data_Total_Tax
+    total_average_tax_rate = @personal_economic_data_object[:economic_object_aggregate].data_Average_Tax_Rate.round(2)
     header = "<div>Total income:#{total_income}</div> 
     <div>Total taxes:#{total_taxes}</div>
+    <div>Average Tax Rate:#{total_average_tax_rate}%</div>
     <div>Number of different incomes:#{@number_of_incomes}</div><br>"
   end
   
@@ -60,6 +62,7 @@ module Convert_to_html
     size_of_the_income = values.data_Income_Size;
     amount_taxed = values.income_stop - values.income_start;
     taxes_to_pay = values.data_Income_Tax;
+    average_tax_rate = values.data_Average_Tax_Rate.round(2);
     start_of_the_taxation = values.income_start;
     end_of_the_taxation = values.income_stop;
     #puts "These are the taxes to pay: #{taxes_to_pay}"
@@ -69,6 +72,7 @@ module Convert_to_html
 <div>Size of the income:#{size_of_the_income}</div>
 <div>Amount Taxed:#{amount_taxed}</div>
 <div>Taxes to Pay:#{taxes_to_pay}</div>
+<div>Average Tax Rate:#{average_tax_rate}%</div>
 <div>Start of the taxation:#{start_of_the_taxation}</div>
 <div>End of the taxation:#{end_of_the_taxation}</div><br>"
       return @income_instance

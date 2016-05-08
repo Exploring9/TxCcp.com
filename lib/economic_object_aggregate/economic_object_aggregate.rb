@@ -1,10 +1,11 @@
 class Economic_object_aggregate
   attr_reader :data_Income_Size_aggregate,:data_Income_Intervals
-attr_accessor :data_Total_Tax
+attr_accessor :data_Total_Tax, :data_Average_Tax_Rate
   def initialize(economic_data_object)
     @data_Income_Intervals = {}
     @data_Income_Size_aggregate = addition(economic_data_object)
     @data_Total_Tax = 0;
+    @data_Average_Tax_Rate = 0;
   end
   
   def addition(economic_data_object)
@@ -30,6 +31,7 @@ attr_accessor :data_Total_Tax
         @data_Total_Tax = @data_Total_Tax + value.data_Income_Tax
       end
       puts "This is the total tax:#{@data_Total_Tax}"
+      @data_Average_Tax_Rate = @data_Total_Tax/@data_Income_Size_aggregate * 100
       return @data_Total_Tax       
   end
 end

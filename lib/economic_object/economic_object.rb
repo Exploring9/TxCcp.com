@@ -1,4 +1,4 @@
-#require view_all_taxes_helper
+#require view_all_taxes
 # use it to access the DB
 class Economic_object
   attr_reader :numbers_assigned_to_income, 
@@ -7,7 +7,7 @@ class Economic_object
   :data_Income_Size,
   :taxed_income,
   :income_start,
-  :income_stop,
+  :income_stop, :data_Average_Tax_Rate,
   :tax_type_name, :data_Income_Tax
   
   def initialize(params, numbers_assigned_to_income)
@@ -17,6 +17,7 @@ class Economic_object
     @name_data_Income_Source = normalize_name_data_Income_Source(params)
     @data_Income_Size = normalize_data_Income_Size(params)
     @data_Income_Tax = 0;
+    @data_Average_Tax_Rate = 0;
     @data_Income_Tax_Rates = {}
   end
   
@@ -54,25 +55,25 @@ class Economic_object
   end
   
   def add_tax_objects(personal_economic_data_object)
-    #@import_all_tax_information = View_all_taxesHelper.all_entries();
-    @tax_type_id = View_all_taxesHelper.all_tax_type_per_econ_transactions_and_tax_jurisdiction_id(@data_Income_Location_Country,@data_Income_Source)
+    #@import_all_tax_information = View_all_taxes.all_entries();
+    @tax_type_id = View_all_taxes.all_tax_type_per_econ_transactions_and_tax_jurisdiction_id(@data_Income_Location_Country,@data_Income_Source)
     @tax_type_name = @tax_type_id[0][:tax_type_name]
     @tax_type_id = @tax_type_id[0][:tax_type_id];#This is to get the result -> There is an uniqueness constraint between tax_type_id and econ_transactions
     
     puts "This is the result: @test_tax_type #{@tax_type_id}"
     @filing_status_id= personal_economic_data_object[:personal_object].data_Person_Filing_Status
     
-    @tax_id =View_all_taxesHelper.all_tax_id_from_taxation(@data_Income_Location_Country,@tax_type_id,@filing_status_id)
+    @tax_id =View_all_taxes.all_tax_id_from_taxation(@data_Income_Location_Country,@tax_type_id,@filing_status_id)
     @tax_id = @tax_id[0][:tax_id] #There can only be one result due to the uniqueness constraint
     
     puts "This is the result: @tax_id -> #{@tax_id}"
     
-    @group_tax_rate_id = View_all_taxesHelper.all_tax_rate_id_from_financial_year_and_currency(1,1)#Hardcoded financial year and currency
+    @group_tax_rate_id = View_all_taxes.all_tax_rate_id_from_financial_year_and_currency(1,1)#Hardcoded financial year and currency
     
-    @tax_rate_id = View_all_taxesHelper.all_tax_rate_from_tax_id(@tax_id)
+    @tax_rate_id = View_all_taxes.all_tax_rate_from_tax_id(@tax_id)
     @tax_rate_id = @tax_rate_id[0][:tax_rate_id]#There can only be one result due to the uniqueness constraint
     
-    @tax_bracket_information = View_all_taxesHelper.all_information_from_tax_levy_id(@tax_rate_id)
+    @tax_bracket_information = View_all_taxes.all_information_from_tax_levy_id(@tax_rate_id)
     puts @tax_bracket_information
   end
   
@@ -128,7 +129,7 @@ class Economic_object
     tax_bracket_calculation()
     
     puts "This is the Tax Rate:{#@data_Income_Tax_Rates}"
-   
+    @data_Average_Tax_Rate = @data_Income_Tax / @data_Income_Size * 100
   end
 end
 
