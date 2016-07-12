@@ -7,8 +7,9 @@
  * PART 5 - ECONOMIC DATA
  * PART 6 - ADD THE DETAILS TO THE WEBPAGE
  * PART 7 - SENDING THE INFO TO CALCULATE THE TAXES
- * PART 8 - AJAX CALLER
- * PART 9 - CODE EXECUTER
+ * PART 8 - Graphing tool
+ * PART 9 - AJAX CALLER
+ * PART 10 - CODE EXECUTER
  * LOAD UNDERSCORE
  */
 // Listening events (The country selection changes the filing status)
@@ -49,8 +50,10 @@ $(document).ready(function() {
             selected_Element_List["name"].push(selection_scope[i]["name"]);		
   		} 
   		// Now there is only one value - Countries - Change it for optimazation?//
-  		console.log(selected_Element_List);
-  		ajax_Caller.ajax_Send_Input_Forms(selected_Element_List);
+  		console.log(selection_scope.length);
+  		if (selection_scope.length !== 0){ //So that the other pages don't start calling Ajax when all of the JS files are mimified into one big js file
+  			ajax_Caller.ajax_Send_Input_Forms(selected_Element_List);
+  		}
   	},
   	// PART B - GET THE INFO ON THE DEPENDED VARIABLES (I will need to change it since it very data dependent -> There is a strict flow)
   	information_Fetcher_Single: function(){
@@ -267,7 +270,168 @@ $(document).ready(function() {
   		});
   	}};
   };
-  // PART 8 - AJAX CALLER
+  // PART 8 - GRAPHING TOOL
+  
+  var graph = {
+  	draw : function (data) {
+		var data = [1,2,3,4,5];
+		console.log("Called draw data");
+	    var color = d3.scale.category20b();
+	    var width = 420,
+	        barHeight = 20;
+	 
+	    var x = d3.scale.linear()
+	        .range([0, width])
+	        .domain([0, d3.max(data)]);
+	 
+	    var chart = d3.select("#graph")
+	        .attr("width", width)
+	        .attr("height", barHeight * data.length);
+	 
+	    var bar = chart.selectAll("g")
+	        .data(data)
+	        .enter().append("g")
+	        .attr("transform", function (d, i) {
+	                  return "translate(0," + i * barHeight + ")";
+	              });
+	 
+	    bar.append("rect")
+	        .attr("width", x)
+	        .attr("height", barHeight - 1)
+	        .style("fill", function (d) {
+	                   return color(d);
+	              });
+	 
+	    bar.append("text")
+	        .attr("x", function (d) {
+	                  return x(d) - 10;
+	              })
+	        .attr("y", barHeight / 2)
+	        .attr("dy", ".35em")
+	        .style("fill", "white")
+	        .text(function (d) {
+	                  return d;
+	              });
+	},
+	draw2: function() {
+		console.log("You are in the draw2 function");
+		var data_original = [{
+			"income":1000,
+			"tax": 100,
+			"percentage":10
+		},{
+			"income":2000,
+			"tax": 300,
+			"percentage":15
+		}];
+		// Added up the previous values
+		var data = [{
+			"income":0,
+			"tax":0,
+			"percentage_average":13.33,
+			"percentage_per_income":0
+		},{
+			"income":1000,
+			"tax": 100,
+			"percentage_average":13.33,
+			"percentage_per_income":10
+		},{
+			"income":3000,
+			"tax": 400,
+			"percentage_average":13.33,
+			"percentage_per_income":15
+		}];
+		
+		//Create the actual graph itself
+		var svg = d3.select("#graph2"), 
+			width = 350,
+			height = 350,
+			margins = {
+				top: 20,
+				bottom: 20,
+				right: 20,
+				left: 50
+			};
+		
+		//I will have to made domain dynamic (Equal to the maximum that was earned by the person = x and y = taxes paid)
+		var xScale = d3.scale.linear().range([margins.left, width - margins.right]).domain([0,3000]),
+			y1Scale = d3.scale.linear().range([height - margins.top, margins.bottom]).domain([0,400]),
+			y2Scale = d3.scale.linear().range([height - margins.top, margins.bottom]).domain([0,20]);
+			
+		var	xAxis = d3.svg.axis().scale(xScale),
+			yAxisLeft = d3.svg.axis().scale(y1Scale).orient("left"),
+			yAxisRight = d3.svg.axis().scale(y2Scale).orient("right");
+		
+		//Add the x-axis -> translate puts it lower by 320px	
+		svg.append("svg:g")
+		   .attr("transform","translate(0,"+(height - margins.bottom)+")")
+		   .call(xAxis);
+		//Add the 2 y-axis
+		svg.append("svg:g")
+		   .attr("transform", "translate("+(margins.left-5)+",0)")
+		   .call(yAxisLeft);
+		
+		svg.append("svg:g")
+		   .attr("transform", "translate("+(width-margins.right+5)+",0)")
+		   .call(yAxisRight);
+		
+		//Create the lines
+		var lineGen = d3.svg.line()
+			.x(function(d) {
+				return xScale(d.income);
+			})
+			.y(function(d) {
+				return y1Scale(d.tax);
+			});
+			
+		var lineGen_average = d3.svg.line()
+			.x(function(d) {
+				return xScale(d.income);
+			})
+			.y(function(d){
+				return y2Scale(d.percentage_average);
+			});
+		
+		var lineGen_per_income = d3.svg.line()
+			.x(function(d) {
+				return xScale(d.income);
+			})
+			.y(function(d){
+				return y2Scale(d.percentage_per_income);
+			});	
+			
+		//Add the D3 lines
+		svg.append("svg:path")
+		   .attr("d",lineGen(data))
+		   .attr("stroke","green")
+		   .attr("stroke-width",2)
+		   .attr("fill","none");
+		
+		svg.append("svg:path")
+		   .attr("d",lineGen_average(data))
+		   .attr("stroke","red")
+		   .attr("stroke-width",2)
+		   .style("stroke-dasharray",("3,3"))
+		   .attr("fill","none");
+		
+		svg.append("svg:path")
+		   .attr("d",lineGen_per_income(data))
+		   .attr("stroke","blue")
+		   .attr("stroke-width",2)
+		   .style("stroke-dasharray",("3,3"))
+		   .attr("fill","none");   
+		   
+		   //This doesn't work -> Change it
+		svg.selectAll("circle")
+		   .data(function (d) {return d;})
+		   .enter().append("circle")
+		   .attr("cx",function (d) {return xScale(d.income);})
+		   .attr("cy",function (d) {return yScale(d.tax);})
+		   .attr("r",3);
+		   
+	}
+	};
+  // PART 9 - AJAX CALLER
   var ajax_Caller = {
   	ajax_Send_Input_Forms: function (selected_Element_List) {
   		$.ajax({
@@ -298,6 +462,7 @@ $(document).ready(function() {
   				if(taxes){
   					add_results.add_text_results(taxes);
   					console.log("stopped here");
+  					ajax_Caller.ajax_graphing_tool();
   				}
   			},
   			error:function(jqXHR, exception, errorThrown){
@@ -305,8 +470,23 @@ $(document).ready(function() {
   				console.log(errorThrown);
   			}
   		});
-  	}
-  };
+  	}/*,
+  	ajax_graphing_tool: function(){
+	  	$.ajax({
+	           type: "GET",
+	           contentType: "application/json; charset=utf-8",
+	           url: url_of_the_website+'home/data',
+	           dataType: 'json',
+	           success: function (data) {
+	           	   console.log(data);
+	               graph.draw(data);
+	               graph.draw2();
+	           },
+	           error: function (result) {
+	               console.log(result);
+	           }
+	       });
+  }*/};
   // PART 8 - CODE EXECUTER
   // TODO - Execution of the functions
   //Part 2 - A (Mass data addition)
@@ -323,6 +503,7 @@ $(document).ready(function() {
   economic_Details().delete_Economic_Object();
   // Part 7 - Send all of the information
   send_Information_To_The_Server().send_tax_information();
+  // Test
+  ajax_Caller.ajax_graphing_tool();
 });
 })(jQuery, window);
-

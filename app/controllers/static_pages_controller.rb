@@ -8,4 +8,7 @@ class StaticPagesController < ApplicationController
   def original_app
   end
   
+  def data
+        render :json => [1,3,3,3,5]
+  end
 end

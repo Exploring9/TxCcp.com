@@ -1,83 +1,104 @@
 /* line 4, /home/no/Desktop/Programming/TxC/TxCcp.com/app/assets/stylesheets/comments.scss */
 .comment_content {
   border-style: solid;
-  border-width: 1px; }
+  border-width: 1px;
+}
 /* line 7, /home/no/Desktop/Programming/TxC/TxCcp.com/app/assets/stylesheets/home.scss */
 header li {
   border: 1px solid gray;
   margin: 5px;
-  width: 200px; }
+  width: 200px;
+}
 
 /* line 15, /home/no/Desktop/Programming/TxC/TxCcp.com/app/assets/stylesheets/home.scss */
 body .box {
   box-sizing: border-box;
   margin: 2px;
-  height: 200px;
-  max-height: 200px;
+  height: 400px;
+  max-height: 400px;
   width: 450px;
   max-widht: 450px;
   border: 2.5px solid;
   position: relative;
-  overflow-y: auto; }
+  overflow-y: auto;
+}
 /* line 27, /home/no/Desktop/Programming/TxC/TxCcp.com/app/assets/stylesheets/home.scss */
 body .left {
-  float: left; }
+  float: left;
+}
 /* line 31, /home/no/Desktop/Programming/TxC/TxCcp.com/app/assets/stylesheets/home.scss */
 body .right {
-  float: right; }
+  float: right;
+}
+/* line 35, /home/no/Desktop/Programming/TxC/TxCcp.com/app/assets/stylesheets/home.scss */
+body #graph2 {
+  width: 400px;
+  height: 350px;
+}
 /* line 4, /home/no/Desktop/Programming/TxC/TxCcp.com/app/assets/stylesheets/posts.scss */
 .article_title {
-  text-decoration: underline; }
+  text-decoration: underline;
+}
 /* line 1, /home/no/Desktop/Programming/TxC/TxCcp.com/app/assets/stylesheets/scaffolds.scss */
 body {
   background-color: #fff;
   color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
-  line-height: 18px; }
+  line-height: 18px;
+}
 
 /* line 9, /home/no/Desktop/Programming/TxC/TxCcp.com/app/assets/stylesheets/scaffolds.scss */
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
-  line-height: 18px; }
+  line-height: 18px;
+}
 
 /* line 15, /home/no/Desktop/Programming/TxC/TxCcp.com/app/assets/stylesheets/scaffolds.scss */
 pre {
   background-color: #eee;
   padding: 10px;
-  font-size: 11px; }
+  font-size: 11px;
+}
 
 /* line 21, /home/no/Desktop/Programming/TxC/TxCcp.com/app/assets/stylesheets/scaffolds.scss */
 a {
-  color: #000; }
-  /* line 23, /home/no/Desktop/Programming/TxC/TxCcp.com/app/assets/stylesheets/scaffolds.scss */
-  a:visited {
-    color: #666; }
-  /* line 26, /home/no/Desktop/Programming/TxC/TxCcp.com/app/assets/stylesheets/scaffolds.scss */
-  a:hover {
-    color: #fff;
-    background-color: #000; }
+  color: #000;
+}
+/* line 23, /home/no/Desktop/Programming/TxC/TxCcp.com/app/assets/stylesheets/scaffolds.scss */
+a:visited {
+  color: #666;
+}
+/* line 26, /home/no/Desktop/Programming/TxC/TxCcp.com/app/assets/stylesheets/scaffolds.scss */
+a:hover {
+  color: #fff;
+  background-color: #000;
+}
 
 /* line 33, /home/no/Desktop/Programming/TxC/TxCcp.com/app/assets/stylesheets/scaffolds.scss */
 div.field, div.actions {
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+}
 
 /* line 38, /home/no/Desktop/Programming/TxC/TxCcp.com/app/assets/stylesheets/scaffolds.scss */
 footer {
   position: relative;
   bottom: 0px;
-  clear: both; }
+  clear: both;
+}
 
 /* line 44, /home/no/Desktop/Programming/TxC/TxCcp.com/app/assets/stylesheets/scaffolds.scss */
 #notice {
-  color: green; }
+  color: green;
+}
 
 /* line 48, /home/no/Desktop/Programming/TxC/TxCcp.com/app/assets/stylesheets/scaffolds.scss */
 .field_with_errors {
   padding: 2px;
   background-color: red;
-  display: table; }
+  display: table;
+}
 
 /* line 54, /home/no/Desktop/Programming/TxC/TxCcp.com/app/assets/stylesheets/scaffolds.scss */
 #error_explanation {
@@ -86,21 +107,24 @@ footer {
   padding: 7px;
   padding-bottom: 0;
   margin-bottom: 20px;
-  background-color: #f0f0f0; }
-  /* line 61, /home/no/Desktop/Programming/TxC/TxCcp.com/app/assets/stylesheets/scaffolds.scss */
-  #error_explanation h2 {
-    text-align: left;
-    font-weight: bold;
-    padding: 5px 5px 5px 15px;
-    font-size: 12px;
-    margin: -7px;
-    margin-bottom: 0px;
-    background-color: #c00;
-    color: #fff; }
-  /* line 71, /home/no/Desktop/Programming/TxC/TxCcp.com/app/assets/stylesheets/scaffolds.scss */
-  #error_explanation ul li {
-    font-size: 12px;
-    list-style: square; }
+  background-color: #f0f0f0;
+}
+/* line 61, /home/no/Desktop/Programming/TxC/TxCcp.com/app/assets/stylesheets/scaffolds.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 71, /home/no/Desktop/Programming/TxC/TxCcp.com/app/assets/stylesheets/scaffolds.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.

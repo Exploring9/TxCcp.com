@@ -8,21 +8,25 @@ Rails.application.routes.draw do
   
   # Static pages about the application
   get 'static_pages/about_us'
+  get 'static_pages/data', :defaults => { :format => 'json' }
   get 'static_pages/terms_and_conditions'
-  get 'static_pages/original_app'
-  
+
   # Page to contact me
   get 'messages', to: 'messages#new'
   post 'messages', to: 'messages#create'
   
   #This is for the posts
-  resources :posts, only: [:index, :new, :show, :create, :edit], param: :post_id
+  resources :posts, only: [:index, :new, :show, :create, :edit, :save_edit], param: :post_id
   post 'posts/:post_id/edit', to: 'posts#save_edit'
   resources :comments, only: [:create], param: :comment_id
+
+  match '/home/send_Input_Data', to: 'home#send_Input_Data', :via => [:get, :post]
   
-  match 'home/send_Input_Data', to: 'home#send_Input_Data', :via => [:get, :post]
+  match '/home/send_All_Info', to: 'home#send_All_Info', :via => [:get, :post]
   
-  match 'home/send_All_Info', to: 'home#send_All_Info', :via => [:get, :post]
+  #Cathing an error: match '/data', to: 'home#data_test', :via => [:get, :post]
+  match '/home/data', to: 'home#data', :via => [:get, :post]
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
   
@@ -73,5 +77,5 @@ Rails.application.routes.draw do
   #     # Directs /admin/products/* to Admin::ProductsController
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
-  #   end
+  #   end    
 end

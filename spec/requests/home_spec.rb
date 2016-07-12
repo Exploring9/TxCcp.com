@@ -18,7 +18,7 @@ RSpec.describe "HomeSpec", type: :request do
       expect(page).to have_content("Tax Calculator - Phoenix™")
       sleep(1)
     end
-  
+
     it "can't add income without personal details", :js => true do
       visit '/'
       find('body').click
@@ -129,8 +129,8 @@ RSpec.describe "HomeSpec", type: :request do
       find('input[name=Button_Add_Income_Details]').click # This is to create the 2nd income
       expect(page).to have_css('input.economic_data_Object_Created_2')
     end        
-  
-    end
+
+    end   
 end
 
 =begin

@@ -18,7 +18,7 @@
 	</p>
 	<div id="comments">
 	  <%=  render "comments/form"  %>
-	  <p>Number of Comments: <%= count_comments(request.fullpath) %></p>
+	  <p>Number of Comments: <%= count_comments(request) %></p>
 	  <%=  render "comments/comment" %>
 	</div>
 </div>

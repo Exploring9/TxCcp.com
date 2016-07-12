@@ -15,8 +15,8 @@ body{
   .box{
     box-sizing: border-box;
     margin: 2px;
-    height:     200px;
-    max-height: 200px;
+    height:     400px;
+    max-height: 400px;
     width:      450px;
     max-widht:  450px;
     border: 2.5px solid;
@@ -31,4 +31,10 @@ body{
   .right{
     float: right;
   }
+  
+  #graph2{
+    width: 400px;
+    height: 350px;
+  }
+  
 }

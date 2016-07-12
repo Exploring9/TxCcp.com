@@ -25,8 +25,8 @@ class PostsControllerTest < ActionController::TestCase
   end
 
   def test_get_the_show_page
-    post :create, {:title => "a", :body => "s", :post_id => 1, :post_type => "General Taxation"}
-    get :show, :post_id => 1
+    post :create, params: {:title => "a", :body => "s", :post_type => "General Taxation", post_id: 1}
+    get "show", params: {post_id: 1}
     assert_response :success
     assert_template "posts/show"
     assert_template layout: "layouts/application"
@@ -37,7 +37,7 @@ class PostsControllerTest < ActionController::TestCase
   end
   
   def test_get_edit_page
-    get :edit, :post_id => 1
+    get :edit, params: {post_id: 1}
     assert_template "posts/edit"
     assert_template layout: "layouts/application"
     assert_template layout: "layouts/application", partial: "_footer"
@@ -49,8 +49,9 @@ class PostsControllerTest < ActionController::TestCase
   end
   
   def test_flash_edit_bad_post
-    #Params is wrong
-    post :save_edit, {:title => nil, :body => "", :post_id => 2, :post_type => "General Taxation" }
+    puts "This is: PostsControllerTest#test_flash_edit_bad_post"
+    #Params is wrong => id is needed to create the correct route
+    post :save_edit,  params: {:title => nil, :body => "", :post_id => 2, :post_type => "General Taxation"}
     #assert_redirected_to(controller: "message", action: "new") 
     assert_equal  "An error occured whilst updating the post check 
       whether you have entered values in the title and body cells.", flash[:alert]     
@@ -58,7 +59,7 @@ class PostsControllerTest < ActionController::TestCase
 
   def test_flash_bad_post
     #Params is wrong
-    post :create, {:title => nil, :body => "", :post_id => 2, :post_type => "General Taxation" }
+    post :create, params: {:title => nil, :body => "", :post_id => 2, :post_type => "General Taxation" }
     #assert_redirected_to(controller: "message", action: "new") 
     assert_equal  "An error occured whilst creating the post check 
       whether you have entered values in the title and body cells.", flash[:alert] 

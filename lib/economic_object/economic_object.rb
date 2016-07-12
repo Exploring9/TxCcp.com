@@ -130,6 +130,7 @@ class Economic_object
     
     puts "This is the Tax Rate:{#@data_Income_Tax_Rates}"
     @data_Average_Tax_Rate = @data_Income_Tax / @data_Income_Size * 100
+    puts "This is the Average Tax Rate:{#@data_Average_Tax_Rate}"
   end
 end
 

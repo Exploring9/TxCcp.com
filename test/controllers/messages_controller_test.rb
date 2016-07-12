@@ -27,7 +27,7 @@ class MessagesControllerTest < ActionController::TestCase
   
   def test_flash_bad_message
     #Params is wrong
-    post :create, {:name => "a",:email => "", :content => "s"}
+    post :create, params: {:name => "a",:email => "", :content => "s"}
     #assert_redirected_to(controller: "message", action: "new") 
     assert_equal "An error occurred while delivering this message.
       Check whether you have correctly written your name/email/content. (They can't be blank)", flash[:alert] 
@@ -35,7 +35,7 @@ class MessagesControllerTest < ActionController::TestCase
   
   def test_flash_good_message
     #Params is good
-    post :create, {:name => "a",:email => "@", :content => "s"}
+    post :create, params: {:name => "a",:email => "@", :content => "s"}
     #assert_redirected_to(controller: "message", action: "new") 
     assert_equal  "Your messages has been sent.", flash[:notice] 
   end

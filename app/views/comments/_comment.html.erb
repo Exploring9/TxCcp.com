@@ -1,4 +1,4 @@
-<% load_comments(request.fullpath).each do |comment| %>
+<% load_comments(request).each do |comment| %>
   <p class="comment_content">
     <p class="comment_name"><strong><%= comment[:name] %></strong></p>
     <p class="comment_body"><%= comment[:body] %></p>
